@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  Event manager based on event response chain
+  Event manager based on event response chain for iOS in Swift 4.0. Add, Delete, Replace, Exchange for events
                    DESC
 
   s.homepage     = "https://github.com/TopSkySir/LTRouterEvent.git"
