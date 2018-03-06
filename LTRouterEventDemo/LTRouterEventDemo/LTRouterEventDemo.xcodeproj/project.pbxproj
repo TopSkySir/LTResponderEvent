@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A66C7B22204CDCB8001475F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B21204CDCB8001475F7 /* AppDelegate.swift */; };
+		A66C7B24204CDCB8001475F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B23204CDCB8001475F7 /* ViewController.swift */; };
+		A66C7B29204CDCB8001475F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66C7B28204CDCB8001475F7 /* Assets.xcassets */; };
+		A66C7B2C204CDCB8001475F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66C7B2A204CDCB8001475F7 /* LaunchScreen.storyboard */; };
+		A66C7B37204CDCB8001475F7 /* LTRouterEventDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B36204CDCB8001475F7 /* LTRouterEventDemoTests.swift */; };
+		A66C7B42204CDCB8001475F7 /* LTRouterEventDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B41204CDCB8001475F7 /* LTRouterEventDemoUITests.swift */; };
+		A66C7B56204CE303001475F7 /* LTResponderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B55204CE303001475F7 /* LTResponderRouter.swift */; };
+		A66C7B61204D2F0C001475F7 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */; };
+		A66C7B62204D2F0C001475F7 /* BaseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */; };
+		A66C7B63204D2F0C001475F7 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */; };
+		A66C7B66204D2F25001475F7 /* TestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B65204D2F25001475F7 /* TestContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A66C7B33204CDCB8001475F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A66C7B16204CDCB8001475F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A66C7B1D204CDCB8001475F7;
+			remoteInfo = LTRouterEventDemo;
+		};
+		A66C7B3E204CDCB8001475F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A66C7B16204CDCB8001475F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A66C7B1D204CDCB8001475F7;
+			remoteInfo = LTRouterEventDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A66C7B1E204CDCB8001475F7 /* LTRouterEventDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTRouterEventDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66C7B21204CDCB8001475F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A66C7B23204CDCB8001475F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A66C7B28204CDCB8001475F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A66C7B2B204CDCB8001475F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A66C7B2D204CDCB8001475F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A66C7B32204CDCB8001475F7 /* LTRouterEventDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTRouterEventDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66C7B36204CDCB8001475F7 /* LTRouterEventDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRouterEventDemoTests.swift; sourceTree = "<group>"; };
+		A66C7B38204CDCB8001475F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A66C7B3D204CDCB8001475F7 /* LTRouterEventDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTRouterEventDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66C7B41204CDCB8001475F7 /* LTRouterEventDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRouterEventDemoUITests.swift; sourceTree = "<group>"; };
+		A66C7B43204CDCB8001475F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A66C7B55204CE303001475F7 /* LTResponderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTResponderRouter.swift; sourceTree = "<group>"; };
+		A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContentViewController.swift; sourceTree = "<group>"; };
+		A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		A66C7B65204D2F25001475F7 /* TestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A66C7B1B204CDCB8001475F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B2F204CDCB8001475F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B3A204CDCB8001475F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A66C7B15204CDCB8001475F7 = {
+			isa = PBXGroup;
+			children = (
+				A66C7B20204CDCB8001475F7 /* LTRouterEventDemo */,
+				A66C7B35204CDCB8001475F7 /* LTRouterEventDemoTests */,
+				A66C7B40204CDCB8001475F7 /* LTRouterEventDemoUITests */,
+				A66C7B1F204CDCB8001475F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A66C7B1F204CDCB8001475F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B1E204CDCB8001475F7 /* LTRouterEventDemo.app */,
+				A66C7B32204CDCB8001475F7 /* LTRouterEventDemoTests.xctest */,
+				A66C7B3D204CDCB8001475F7 /* LTRouterEventDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A66C7B20204CDCB8001475F7 /* LTRouterEventDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B54204CE078001475F7 /* Sources */,
+				A66C7B4F204CDD0A001475F7 /* UI */,
+				A66C7B21204CDCB8001475F7 /* AppDelegate.swift */,
+				A66C7B23204CDCB8001475F7 /* ViewController.swift */,
+				A66C7B28204CDCB8001475F7 /* Assets.xcassets */,
+				A66C7B2A204CDCB8001475F7 /* LaunchScreen.storyboard */,
+				A66C7B2D204CDCB8001475F7 /* Info.plist */,
+			);
+			path = LTRouterEventDemo;
+			sourceTree = "<group>";
+		};
+		A66C7B35204CDCB8001475F7 /* LTRouterEventDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B36204CDCB8001475F7 /* LTRouterEventDemoTests.swift */,
+				A66C7B38204CDCB8001475F7 /* Info.plist */,
+			);
+			path = LTRouterEventDemoTests;
+			sourceTree = "<group>";
+		};
+		A66C7B40204CDCB8001475F7 /* LTRouterEventDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B41204CDCB8001475F7 /* LTRouterEventDemoUITests.swift */,
+				A66C7B43204CDCB8001475F7 /* Info.plist */,
+			);
+			path = LTRouterEventDemoUITests;
+			sourceTree = "<group>";
+		};
+		A66C7B4F204CDD0A001475F7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B60204D2F0C001475F7 /* View */,
+				A66C7B5B204D2F0C001475F7 /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A66C7B54204CE078001475F7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B55204CE303001475F7 /* LTResponderRouter.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A66C7B5B204D2F0C001475F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */,
+				A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */,
+				A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A66C7B60204D2F0C001475F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A66C7B65204D2F25001475F7 /* TestContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A66C7B1D204CDCB8001475F7 /* LTRouterEventDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A66C7B46204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemo" */;
+			buildPhases = (
+				A66C7B1A204CDCB8001475F7 /* Sources */,
+				A66C7B1B204CDCB8001475F7 /* Frameworks */,
+				A66C7B1C204CDCB8001475F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTRouterEventDemo;
+			productName = LTRouterEventDemo;
+			productReference = A66C7B1E204CDCB8001475F7 /* LTRouterEventDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A66C7B31204CDCB8001475F7 /* LTRouterEventDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A66C7B49204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemoTests" */;
+			buildPhases = (
+				A66C7B2E204CDCB8001475F7 /* Sources */,
+				A66C7B2F204CDCB8001475F7 /* Frameworks */,
+				A66C7B30204CDCB8001475F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A66C7B34204CDCB8001475F7 /* PBXTargetDependency */,
+			);
+			name = LTRouterEventDemoTests;
+			productName = LTRouterEventDemoTests;
+			productReference = A66C7B32204CDCB8001475F7 /* LTRouterEventDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A66C7B3C204CDCB8001475F7 /* LTRouterEventDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A66C7B4C204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemoUITests" */;
+			buildPhases = (
+				A66C7B39204CDCB8001475F7 /* Sources */,
+				A66C7B3A204CDCB8001475F7 /* Frameworks */,
+				A66C7B3B204CDCB8001475F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A66C7B3F204CDCB8001475F7 /* PBXTargetDependency */,
+			);
+			name = LTRouterEventDemoUITests;
+			productName = LTRouterEventDemoUITests;
+			productReference = A66C7B3D204CDCB8001475F7 /* LTRouterEventDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A66C7B16204CDCB8001475F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = TopSky;
+				TargetAttributes = {
+					A66C7B1D204CDCB8001475F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A66C7B31204CDCB8001475F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A66C7B1D204CDCB8001475F7;
+					};
+					A66C7B3C204CDCB8001475F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A66C7B1D204CDCB8001475F7;
+					};
+				};
+			};
+			buildConfigurationList = A66C7B19204CDCB8001475F7 /* Build configuration list for PBXProject "LTRouterEventDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A66C7B15204CDCB8001475F7;
+			productRefGroup = A66C7B1F204CDCB8001475F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A66C7B1D204CDCB8001475F7 /* LTRouterEventDemo */,
+				A66C7B31204CDCB8001475F7 /* LTRouterEventDemoTests */,
+				A66C7B3C204CDCB8001475F7 /* LTRouterEventDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A66C7B1C204CDCB8001475F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66C7B2C204CDCB8001475F7 /* LaunchScreen.storyboard in Resources */,
+				A66C7B29204CDCB8001475F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B30204CDCB8001475F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B3B204CDCB8001475F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A66C7B1A204CDCB8001475F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66C7B63204D2F0C001475F7 /* BaseTableViewController.swift in Sources */,
+				A66C7B61204D2F0C001475F7 /* ContentViewController.swift in Sources */,
+				A66C7B24204CDCB8001475F7 /* ViewController.swift in Sources */,
+				A66C7B56204CE303001475F7 /* LTResponderRouter.swift in Sources */,
+				A66C7B62204D2F0C001475F7 /* BaseContentViewController.swift in Sources */,
+				A66C7B66204D2F25001475F7 /* TestContentView.swift in Sources */,
+				A66C7B22204CDCB8001475F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B2E204CDCB8001475F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66C7B37204CDCB8001475F7 /* LTRouterEventDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A66C7B39204CDCB8001475F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A66C7B42204CDCB8001475F7 /* LTRouterEventDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A66C7B34204CDCB8001475F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A66C7B1D204CDCB8001475F7 /* LTRouterEventDemo */;
+			targetProxy = A66C7B33204CDCB8001475F7 /* PBXContainerItemProxy */;
+		};
+		A66C7B3F204CDCB8001475F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A66C7B1D204CDCB8001475F7 /* LTRouterEventDemo */;
+			targetProxy = A66C7B3E204CDCB8001475F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A66C7B2A204CDCB8001475F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A66C7B2B204CDCB8001475F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A66C7B44204CDCB8001475F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A66C7B45204CDCB8001475F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A66C7B47204CDCB8001475F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A66C7B48204CDCB8001475F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A66C7B4A204CDCB8001475F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LTRouterEventDemo.app/LTRouterEventDemo";
+			};
+			name = Debug;
+		};
+		A66C7B4B204CDCB8001475F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LTRouterEventDemo.app/LTRouterEventDemo";
+			};
+			name = Release;
+		};
+		A66C7B4D204CDCB8001475F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LTRouterEventDemo;
+			};
+			name = Debug;
+		};
+		A66C7B4E204CDCB8001475F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LTRouterEventDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LTRouterEventDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A66C7B19204CDCB8001475F7 /* Build configuration list for PBXProject "LTRouterEventDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A66C7B44204CDCB8001475F7 /* Debug */,
+				A66C7B45204CDCB8001475F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A66C7B46204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A66C7B47204CDCB8001475F7 /* Debug */,
+				A66C7B48204CDCB8001475F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A66C7B49204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A66C7B4A204CDCB8001475F7 /* Debug */,
+				A66C7B4B204CDCB8001475F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A66C7B4C204CDCB8001475F7 /* Build configuration list for PBXNativeTarget "LTRouterEventDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A66C7B4D204CDCB8001475F7 /* Debug */,
+				A66C7B4E204CDCB8001475F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A66C7B16204CDCB8001475F7 /* Project object */;
+}
