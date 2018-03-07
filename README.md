@@ -51,7 +51,7 @@ You can also influence the next responder by adding some decorations.
             var result = userInfo
             result?["address"] = "BeiJing"
             return result
-        }
+    }
 ### Remove 
 Remove unwanted events.
 	
