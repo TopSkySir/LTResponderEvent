@@ -17,7 +17,7 @@ extension UIResponder{
      Register the routing table event.
      The added routing event will be set to the default routing event.
      */
-    @objc func registerRouterEvent() {
+    @objc open func registerRouterEvent() {
 
     }
 }

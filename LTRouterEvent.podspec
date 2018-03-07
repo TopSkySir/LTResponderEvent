@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LTRouterEvent"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Event manager based on event response chain for iOS in Swift 4.0"
 
   # This description is used to generate tags and improve search results.
