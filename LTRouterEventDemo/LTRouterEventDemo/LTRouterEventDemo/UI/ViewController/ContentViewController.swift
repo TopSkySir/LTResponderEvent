@@ -96,7 +96,8 @@ extension ContentViewController {
     }
 
     @objc func getEvent2(_ userInfo: [AnyHashable: Any]?) {
-       self.title = userInfo?["action"] as? String
+        let title = "action is nil"
+        self.title = "getEvent2: \((userInfo?["action"] as? String) ?? title)"
     }
 
 }

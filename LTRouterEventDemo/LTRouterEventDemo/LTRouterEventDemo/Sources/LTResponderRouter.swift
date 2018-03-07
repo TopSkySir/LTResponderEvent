@@ -11,23 +11,27 @@ import UIKit
 
 // MARK: -  Router Event
 
-extension UIResponder {
-
-    public typealias RouterDecorateClosure = ([AnyHashable: Any]?) -> [AnyHashable: Any]?
-    fileprivate typealias RouterTuple = (selector: Selector?, shouldNext: Bool, closure:  RouterDecorateClosure?)
+extension UIResponder{
 
     /**
      Register the routing table event.
      The added routing event will be set to the default routing event.
      */
-    @objc public func registerRouterEvent() {
+    @objc open func registerRouterEvent() {
 
     }
+}
+
+public extension UIResponder {
+
+    typealias RouterDecorateClosure = ([AnyHashable: Any]?) -> [AnyHashable: Any]?
+    fileprivate typealias RouterTuple = (selector: Selector?, shouldNext: Bool, closure:  RouterDecorateClosure?)
+
 
     /**
      Post router event
      */
-    public func post(routerEvent name: AnyHashable, _ userInfo: [AnyHashable: Any]? = nil) {
+    func post(routerEvent name: AnyHashable, _ userInfo: [AnyHashable: Any]? = nil) {
 
         checkInitTable()
 
@@ -53,7 +57,7 @@ extension UIResponder {
     /**
      Add router event
      */
-    public func add(routerEvent name: AnyHashable, _ selector: Selector?, _ shouldNext: Bool = false, _ closure: RouterDecorateClosure? = nil) {
+    func add(routerEvent name: AnyHashable, _ selector: Selector?, _ shouldNext: Bool = false, _ closure: RouterDecorateClosure? = nil) {
         checkTable()
         var routerTable = initRouterTable ?? [AnyHashable: Any]()
         routerTable[name] = (selector, shouldNext, closure)
@@ -63,7 +67,7 @@ extension UIResponder {
     /**
      Remove router event
      */
-    public func remove(routerEvent name: AnyHashable) {
+    func remove(routerEvent name: AnyHashable) {
         checkTable()
         guard var routerTable = initRouterTable  else {
             return
@@ -75,7 +79,7 @@ extension UIResponder {
     /**
      Replace router event
      */
-    public func replace(routerEvent old: AnyHashable, routerEvent new: AnyHashable) {
+    func replace(routerEvent old: AnyHashable, routerEvent new: AnyHashable) {
         checkTable()
         guard var routerTable = initRouterTable  else {
             return
@@ -87,7 +91,7 @@ extension UIResponder {
     /**
      Exchange router event
      */
-    public func exchange(routerEvent lhs: AnyHashable, routerEvent rhs: AnyHashable) {
+    func exchange(routerEvent lhs: AnyHashable, routerEvent rhs: AnyHashable) {
         checkTable()
         guard var routerTable = initRouterTable  else {
             return
@@ -101,7 +105,7 @@ extension UIResponder {
     /**
      Reset router event
      */
-    public func resetRouterEvent() {
+    func resetRouterEvent() {
         setInitRouterTable(copyRouterTable)
     }
 
@@ -109,14 +113,15 @@ extension UIResponder {
 
 
 // MARK: - Router Check
-extension UIResponder {
 
-    fileprivate func checkTable() {
+fileprivate extension UIResponder {
+
+    func checkTable() {
         checkInitTable()
         checkCopyTable()
     }
 
-    fileprivate func checkInitTable() {
+    func checkInitTable() {
         guard shouldInit == nil else {
             return
         }
@@ -125,7 +130,7 @@ extension UIResponder {
         setShouldInit(false)
     }
 
-    fileprivate func checkCopyTable() {
+    func checkCopyTable() {
         guard shouldInit != true else {
             return
         }
@@ -136,7 +141,7 @@ extension UIResponder {
         setShouldCopy(false)
     }
 
-    fileprivate func doCopy() {
+    func doCopy() {
         setCopyRouterTable(initRouterTable)
     }
 
@@ -144,12 +149,13 @@ extension UIResponder {
 
 
 // MARK: - Router Storage
-extension UIResponder {
+
+fileprivate extension UIResponder {
 
     /**
      AssociatedObject Key
      */
-    fileprivate struct LTResponderRouterKeys {
+    struct LTResponderRouterKeys {
         static var shouldInit: String = "shouldInit"
         static var shouldCopy: String = "shouldCopy"
         static var initRouterTable: String = "initRouterTable"
@@ -159,14 +165,14 @@ extension UIResponder {
     /**
      Get associatedObject
      */
-    fileprivate func get(_ associatedKey: UnsafeRawPointer) -> Any? {
+    func get(_ associatedKey: UnsafeRawPointer) -> Any? {
         return objc_getAssociatedObject(self, associatedKey)
     }
 
     /**
      Set associatedObject
      */
-    fileprivate func set(_ associatedKey: UnsafeRawPointer, value: Any?) {
+    func set(_ associatedKey: UnsafeRawPointer, value: Any?) {
         if value is Bool {
             objc_setAssociatedObject(self, associatedKey, value, .OBJC_ASSOCIATION_ASSIGN)
         } else {
@@ -177,7 +183,7 @@ extension UIResponder {
     /**
      Get initTable of router
      */
-    fileprivate var initRouterTable: [AnyHashable: Any]? {
+    var initRouterTable: [AnyHashable: Any]? {
         return get(&LTResponderRouterKeys.initRouterTable) as? [AnyHashable: Any]
     }
 
@@ -185,21 +191,21 @@ extension UIResponder {
     /**
      Set initTable of router
      */
-    fileprivate func setInitRouterTable(_ newValue: [AnyHashable: Any]?) {
+    func setInitRouterTable(_ newValue: [AnyHashable: Any]?) {
         set(&LTResponderRouterKeys.initRouterTable, value: newValue)
     }
 
     /**
      Get shouldInit
      */
-    fileprivate var shouldInit: Bool?{
+    var shouldInit: Bool?{
         return get(&LTResponderRouterKeys.shouldInit) as? Bool
     }
 
     /**
      Set shouldInit
      */
-    fileprivate func setShouldInit(_ newValue: Bool?) {
+    func setShouldInit(_ newValue: Bool?) {
         set(&LTResponderRouterKeys.shouldInit, value: newValue)
     }
 
@@ -207,28 +213,28 @@ extension UIResponder {
     /**
      Get shouldCopy
      */
-    fileprivate var shouldCopy: Bool {
+    var shouldCopy: Bool {
         return (get(&LTResponderRouterKeys.shouldCopy) as? Bool) ?? true
     }
 
     /**
      Set shouldCopy
      */
-    fileprivate func setShouldCopy(_ newValue: Bool?) {
+    func setShouldCopy(_ newValue: Bool?) {
         set(&LTResponderRouterKeys.shouldCopy, value: newValue)
     }
 
     /**
      Get copyTable of router
      */
-    fileprivate var copyRouterTable: [AnyHashable: Any]? {
+    var copyRouterTable: [AnyHashable: Any]? {
         return get(&LTResponderRouterKeys.copyRouterTable) as? [AnyHashable: Any]
     }
 
     /**
      Set copyTable of router
      */
-    fileprivate func setCopyRouterTable(_ newValue: [AnyHashable: Any]?) {
+    func setCopyRouterTable(_ newValue: [AnyHashable: Any]?) {
         set(&LTResponderRouterKeys.copyRouterTable, value: newValue)
     }
 }
