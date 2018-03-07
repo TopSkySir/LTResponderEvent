@@ -56,6 +56,7 @@ class ContentViewController: BaseContentViewController {
 
         addAction(title: "replace action1 with action2") { [weak self] in
             self?.replace(routerEvent: TestContentView.ShareKey, routerEvent: TestContentView.OrderKey)
+
         }
 
         addAction(title: "exchange action1 and action2") { [weak self] in
@@ -95,8 +96,7 @@ extension ContentViewController {
     }
 
     @objc func getEvent2(_ userInfo: [AnyHashable: Any]?) {
-        let title = "action is nil"
-        self.title = "getEvent2: \((userInfo?["action"] as? String) ?? title)"
+       self.title = userInfo?["action"] as? String
     }
 
 }

@@ -51,6 +51,7 @@ class TestContentView: UIView {
     }
 
     @objc fileprivate func onClick(target: Any) {
+        post(routerEvent: TestContentView.ShareKey)
         post(routerEvent: TestContentView.ShareKey, ["action": "Share"])
     }
 
