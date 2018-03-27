@@ -29,7 +29,7 @@ class ContentViewController: BaseContentViewController {
     override func add() {
 
         addAction(title: "add decorator by viewControler") { [weak self] in
-            self?.add(routerEvent: TestContentView.ShareKey, #selector(self?.getEvent(_:)), false, { (userInfo) -> [AnyHashable : Any]? in
+            self?.add(event: TestContentView.ShareKey, #selector(self?.getEvent(_:)), false, { (userInfo) -> [AnyHashable : Any]? in
                 var result = userInfo
                 if result?["isContent"] != nil {
                     result?["action"] = "add content decorator"
@@ -41,7 +41,7 @@ class ContentViewController: BaseContentViewController {
         }
 
         addAction(title: "add decorator by contentView ") { [weak self] in
-            self?.contentView.add(routerEvent: TestContentView.ShareKey, #selector(self?.getEvent(_:)), true, { (userInfo) -> [AnyHashable : Any]? in
+            self?.contentView.add(event: TestContentView.ShareKey, #selector(self?.getEvent(_:)), true, { (userInfo) -> [AnyHashable : Any]? in
                 var result = userInfo
                 result?["action"] = "content decorator"
                 result?["isContent"] = true
@@ -50,22 +50,22 @@ class ContentViewController: BaseContentViewController {
         }
 
         addAction(title: "remove action1") { [weak self] in
-            self?.remove(routerEvent: TestContentView.ShareKey)
+            self?.remove(event: TestContentView.ShareKey)
         }
 
 
         addAction(title: "replace action1 with action2") { [weak self] in
-            self?.replace(routerEvent: TestContentView.ShareKey, routerEvent: TestContentView.OrderKey)
+            self?.replace(event: TestContentView.ShareKey, event: TestContentView.OrderKey)
 
         }
 
         addAction(title: "exchange action1 and action2") { [weak self] in
-            self?.exchange(routerEvent: TestContentView.ShareKey, routerEvent: TestContentView.OrderKey)
+            self?.exchange(event: TestContentView.ShareKey, event: TestContentView.OrderKey)
         }
 
         addAction(title: "reset") { [weak self] in
-            self?.contentView.remove(routerEvent: TestContentView.ShareKey)
-            self?.resetRouterEvent()
+            self?.contentView.remove(event: TestContentView.ShareKey)
+            self?.resetResponderEvent()
         }
     }
 
@@ -84,10 +84,9 @@ class ContentViewController: BaseContentViewController {
 }
 
 extension ContentViewController {
-
-    override func registerRouterEvent() {
-        add(routerEvent: TestContentView.ShareKey, #selector(getEvent(_:)))
-        add(routerEvent: TestContentView.OrderKey, #selector(getEvent2(_:)))
+    override func registerResponderEvent() {
+        add(event: TestContentView.ShareKey, #selector(getEvent(_:)))
+        add(event: TestContentView.OrderKey, #selector(getEvent2(_:)))
     }
 
     @objc func getEvent(_ userInfo: [AnyHashable: Any]?) {

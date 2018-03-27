@@ -1,4 +1,4 @@
-# LTRouterEvent
+# LTResponderEvent
 -
 Event manager based on event response chain
 
@@ -8,31 +8,31 @@ Event manager based on event response chain
 * iOS 8+
 
 ## Installation
-LTRouterEvent is available through [CocoaPods](http://cocoapods.org). To install
+LTResponderEvent is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-	pod 'LTRouterEvent'
+	pod 'LTResponderEvent'
 
 ## Usage
 
 ### Post Event 
 Define a name as key for event.
 	
-	static let ShareKey: String = "shareKey"
-   	static let OrderKey: Int = 1
+	static let ShareKey: String = "TestContentView.ShareKey"
+   	static let OrderKey: Int = "TestContentView.OrderKey"
 Post a event
 
- 	post(routerEvent: TestContentView.ShareKey)
+ 	post(event: TestContentView.ShareKey)
 You can also post a event with somethings:
 	
-	post(routerEvent: TestContentView.ShareKey, ["action": "Share"])
+	post(event: TestContentView.ShareKey, ["action": "Share"])
  	
 
 ### Register Event
 Add events you want to respond to. In this function, the new event will be accepted as the default.
 
-	override func registerRouterEvent() {
-        add(routerEvent: TestContentView.ShareKey, #selector(getEvent(_:)))
+	override func registerResponderEvent() {
+        add(event: TestContentView.ShareKey, #selector(getEvent(_:)))
     }
     
     @objc func getEvent(_ userInfo: [AnyHashable: Any]?) {
@@ -43,11 +43,11 @@ Add events you want to respond to. In this function, the new event will be accep
 
 You can add events easily.
 
-	add(routerEvent: TestContentView.ShareKey, #selector(getEvent(_:)))
+	add(event: TestContentView.ShareKey, #selector(getEvent(_:)))
 	
 You can also influence the next responder by adding some decorations.
 	
-	add(routerEvent: TestContentView.ShareKey, #selector(getEvent(_:)), false) { (userInfo) -> [AnyHashable : Any]? in
+	add(event: TestContentView.ShareKey, #selector(getEvent(_:)), false) { (userInfo) -> [AnyHashable : Any]? in
             var result = userInfo
             result?["address"] = "BeiJing"
             return result
@@ -55,23 +55,23 @@ You can also influence the next responder by adding some decorations.
 ### Remove 
 Remove unwanted events.
 	
-	remove(routerEvent: TestContentView.ShareKey)
+	remove(event: TestContentView.ShareKey)
 
 ### Replace 
 You can replace some events.
 	
-	replace(routerEvent: TestContentView.ShareKey, routerEvent: TestContentView.OrderKey)
+	replace(event: TestContentView.ShareKey, event: TestContentView.OrderKey)
 	
 ### Exchange 
 Exchange two events 
 	
-	exchange(routerEvent: TestContentView.ShareKey, routerEvent: TestContentView.OrderKey)
+	exchange(event: TestContentView.ShareKey, event: TestContentView.OrderKey)
 	
 ### Reset 
 After the exchange or delete or addition, the default event can be restored.
 
-	resetRouterEvent()
+	resetResponderEvent()
 	
 ## License
-LTRouterEvent is available under the MIT license. See the LICENSE file for more info.
+LTResponderEvent is available under the MIT license. See the LICENSE file for more info.
 	

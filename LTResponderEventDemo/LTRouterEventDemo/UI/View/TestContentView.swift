@@ -18,8 +18,8 @@ class TestContentView: UIView {
     }
     */
 
-    static let ShareKey: String = "shareKey"
-    static let OrderKey: Int = 1
+    static let ShareKey: String = "TestContentView.shareKey"
+    static let OrderKey: String = "TestContentView.OrderKey"
 
     let button = UIButton()
     let button2 = UIButton()
@@ -51,12 +51,12 @@ class TestContentView: UIView {
     }
 
     @objc fileprivate func onClick(target: Any) {
-        post(routerEvent: TestContentView.ShareKey)
-        post(routerEvent: TestContentView.ShareKey, ["action": "Share"])
+        post(event: TestContentView.ShareKey)
+        post(event: TestContentView.ShareKey, ["action": "Share"])
     }
 
     @objc fileprivate func onClick2(target: Any) {
-        post(routerEvent: TestContentView.OrderKey, ["action": "Order"])
+        post(event: TestContentView.OrderKey, ["action": "Order"])
     }
 
 }

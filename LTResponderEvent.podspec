@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LTResponderEvent"
-  s.version      = "0.1.0"
+  s.version      = "0.0.4"
   s.summary      = "Event manager based on event response chain for iOS in Swift 4.0"
 
   s.description  = <<-DESC

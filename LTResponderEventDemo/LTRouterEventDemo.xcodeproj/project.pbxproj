@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A65E85022069E2750084A874 /* RooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E85012069E2750084A874 /* RooterViewController.swift */; };
 		A66C7B22204CDCB8001475F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B21204CDCB8001475F7 /* AppDelegate.swift */; };
 		A66C7B24204CDCB8001475F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B23204CDCB8001475F7 /* ViewController.swift */; };
 		A66C7B29204CDCB8001475F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66C7B28204CDCB8001475F7 /* Assets.xcassets */; };
 		A66C7B2C204CDCB8001475F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66C7B2A204CDCB8001475F7 /* LaunchScreen.storyboard */; };
 		A66C7B37204CDCB8001475F7 /* LTRouterEventDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B36204CDCB8001475F7 /* LTRouterEventDemoTests.swift */; };
 		A66C7B42204CDCB8001475F7 /* LTRouterEventDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B41204CDCB8001475F7 /* LTRouterEventDemoUITests.swift */; };
-		A66C7B56204CE303001475F7 /* LTResponderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B55204CE303001475F7 /* LTResponderRouter.swift */; };
+		A66C7B56204CE303001475F7 /* LTResponderEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B55204CE303001475F7 /* LTResponderEvent.swift */; };
 		A66C7B61204D2F0C001475F7 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */; };
 		A66C7B62204D2F0C001475F7 /* BaseContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */; };
 		A66C7B63204D2F0C001475F7 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A65E85012069E2750084A874 /* RooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RooterViewController.swift; sourceTree = "<group>"; };
 		A66C7B1E204CDCB8001475F7 /* LTRouterEventDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTRouterEventDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66C7B21204CDCB8001475F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A66C7B23204CDCB8001475F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		A66C7B3D204CDCB8001475F7 /* LTRouterEventDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTRouterEventDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66C7B41204CDCB8001475F7 /* LTRouterEventDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRouterEventDemoUITests.swift; sourceTree = "<group>"; };
 		A66C7B43204CDCB8001475F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A66C7B55204CE303001475F7 /* LTResponderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTResponderRouter.swift; sourceTree = "<group>"; };
+		A66C7B55204CE303001475F7 /* LTResponderEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTResponderEvent.swift; sourceTree = "<group>"; };
 		A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContentViewController.swift; sourceTree = "<group>"; };
 		A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 		A66C7B54204CE078001475F7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A66C7B55204CE303001475F7 /* LTResponderRouter.swift */,
+				A66C7B55204CE303001475F7 /* LTResponderEvent.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 				A66C7B5D204D2F0C001475F7 /* BaseContentViewController.swift */,
 				A66C7B5E204D2F0C001475F7 /* BaseTableViewController.swift */,
 				A66C7B5C204D2F0C001475F7 /* ContentViewController.swift */,
+				A65E85012069E2750084A874 /* RooterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -305,10 +308,11 @@
 				A66C7B63204D2F0C001475F7 /* BaseTableViewController.swift in Sources */,
 				A66C7B61204D2F0C001475F7 /* ContentViewController.swift in Sources */,
 				A66C7B24204CDCB8001475F7 /* ViewController.swift in Sources */,
-				A66C7B56204CE303001475F7 /* LTResponderRouter.swift in Sources */,
+				A66C7B56204CE303001475F7 /* LTResponderEvent.swift in Sources */,
 				A66C7B62204D2F0C001475F7 /* BaseContentViewController.swift in Sources */,
 				A66C7B66204D2F25001475F7 /* TestContentView.swift in Sources */,
 				A66C7B22204CDCB8001475F7 /* AppDelegate.swift in Sources */,
+				A65E85022069E2750084A874 /* RooterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LTRouterEventDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTResponderEvent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LTRouterEventDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTRouterEventDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litao.LTResponderEvent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
